@@ -1,0 +1,802 @@
+:root {
+  --text-color: #434455;
+  --title-text-color: #2e2f42;
+  --primary-brand-color: #4d5ae5;
+  --pressed-state-color: #404bbf;
+  --primary-accent-color: #e7e9fc;
+  --primary-bg-color: #f4f4fd;
+  --grad-fon: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--text-color);
+}
+
+/* ============= COPMPONENTS ======================= */
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.h2-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+
+  color: var(--title-text-color);
+}
+
+.h3-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  color: var(--title-text-color);
+}
+
+.text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+
+  color: var(--text-color);
+}
+
+/* ===============COMPONENTS====================== */
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Header */
+
+.header {
+  border-bottom: 0.5px solid var(--primary-accent-color);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.nav {
+  display: flex;
+}
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  margin-right: 76px;
+
+  color: var(--primary-brand-color);
+}
+
+.color {
+  color: #2e2f42;
+}
+
+/* ----Header menu----- */
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.menu-link {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  height: 100%;
+  padding-bottom: 27px;
+
+  color: var(--title-text-color);
+  transition: color var(--transition);
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  color: var(--pressed-state-color);
+}
+
+.menu-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  opacity: 0;
+  transition: opacity var(--transition);
+
+  display: block;
+  width: 100%;
+  height: 5px;
+  border-radius: 4px;
+  background-color: var(--pressed-state-color);
+}
+
+.menu-link:hover::after,
+.menu-link:focus::after {
+  opacity: 1;
+}
+
+.menu-link.active::after {
+  opacity: 1;
+}
+
+.address {
+  font-style: normal;
+  margin-left: auto;
+}
+
+.address-list {
+  display: flex;
+  align-items: center;
+}
+
+.address-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.address-link {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+
+  color: var(--text-color);
+  transition: color var(--transition);
+}
+
+.address-link:hover,
+.address-link:focus {
+  color: var(--pressed-state-color);
+}
+
+/* Section HERO */
+
+.hero {
+  background-color: #2e2f42;
+  padding-top: 188px;
+  padding-bottom: 188px;
+  text-align: center;
+
+  max-width: 1440px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: var(--grad-fon), url(../images/people-office-1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07;
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  width: 496px;
+  margin-top: 0;
+  margin-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto;
+
+  color: #ffffff;
+}
+
+.hero-button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+
+  border: none;
+  border-radius: 4px;
+  transition: background-color var(--transition);
+
+  color: #ffffff;
+  background-color: var(--primary-brand-color);
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--pressed-state-color);
+}
+
+/* ==== Section ADVANTAGES ==== */
+
+.advantages {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.adv-list {
+  display: flex;
+}
+
+.adv-list-items:not(:nth-child(4n)) {
+  margin-right: 24px;
+}
+
+.fild {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 264px;
+  height: 112px;
+  background-color: var(--primary-bg-color);
+}
+
+.adv-subtitle {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  margin-top: 8px;
+  margin-bottom: 8px;
+
+  color: var(--title-text-color);
+}
+
+.text-padding {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* ==== Section ADVANTAGES ==== */
+
+/* ======= Section WORK ======== */
+
+.work {
+  padding-bottom: 120px;
+}
+
+.work-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  text-align: center;
+
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 72px;
+
+  color: #2e2f42;
+}
+
+.work-list {
+  display: flex;
+}
+
+.img {
+  display: block;
+}
+
+.work-img:not(:nth-child(3n)) {
+  margin-right: 24px;
+}
+
+/* ======= Section WORK ======== */
+
+/*======== Section OUR TEAM ========*/
+
+.team {
+  background-color: #f4f4fd;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.team-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  text-align: center;
+
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 72px;
+
+  color: #2e2f42;
+}
+
+.team-list {
+  display: flex;
+}
+
+.team-list-item:not(:nth-child(4n)) {
+  margin-right: 24px;
+}
+
+.team-photo {
+  display: block;
+}
+
+.team-name {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  text-align: center;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+
+  background-color: #ffffff;
+}
+
+.team-subtitle {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  margin-top: 0;
+  margin-bottom: 8px;
+
+  color: #2e2f42;
+}
+
+.team-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+
+  margin-top: 0;
+  margin-bottom: 8px;
+
+  color: #434455;
+}
+
+/* ------icon list-------- */
+
+.team-icon-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.team-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: background-color var(--transition);
+  background-color: var(--primary-brand-color);
+}
+
+.team-icon-link:hover,
+.team-icon-link:focus {
+  background-color: var(--pressed-state-color);
+}
+
+.link-icon {
+  fill: var(--primary-bg-color);
+}
+
+/* ------icon list---------- */
+
+/*======== Section OUR TEAM ========*/
+
+/* ======== Section CUSTOMERS====== */
+
+.customer {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.customer-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  text-align: center;
+
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 72px;
+
+  color: #2e2f42;
+}
+
+.customer-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.customer-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  transition: border var(--transition);
+}
+
+.customer-list-item:hover,
+.customer-list-item:focus {
+  border: 1px solid var(--pressed-state-color);
+}
+
+.customer-link {
+  width: 168px;
+  height: 88px;
+}
+
+.customer-icon {
+  transition: fill var(--transition);
+  fill: #8e8f99;
+}
+
+.customer-icon:hover,
+.customer-icon:focus {
+  fill: var(--pressed-state-color);
+}
+
+/* ======== Section CUSTOMERS====== */
+
+/*=========== Footer ============== */
+
+.footer {
+  background-color: #2e2f42;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.wraps {
+  display: flex;
+  gap: 120px;
+}
+
+.footer-logo {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--primary-brand-color);
+}
+
+.footer-color {
+  color: #f4f4fd;
+}
+
+.footer-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #e7e9fc;
+
+  width: 264px;
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.social-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+
+  letter-spacing: 0.02em;
+  color: #ffffff;
+
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.wrap2-social-list {
+  display: flex;
+  gap: 16px;
+}
+
+.wrap2-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: background-color var(--transition);
+  background-color: var(--primary-brand-color);
+}
+
+.wrap2-icon {
+  fill: var(--primary-bg-color);
+}
+
+.wrap2-social-link:hover,
+.wrap2-social-link:focus {
+  background-color: #31d0aa;
+}
+
+/*=========== Footer ============== */
+/* ======== Modal Window=========== */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity var(--transition);
+
+  background-color: rgba(46, 47, 66, 0.4);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 408px;
+  min-height: 516px;
+
+  background-color: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color var(--transition);
+
+  background-color: var(--primary-accent-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.modal-close-button:hover,
+.modal-close-button:focus {
+  background-color: var(--pressed-state-color);
+}
+
+.modal-close-icon {
+  transition: fill var(--transition);
+}
+
+.modal-close-button:hover .modal-close-icon,
+.modal-close-button:focus .modal-close-icon {
+  fill: #ffffff;
+}
+
+/* -------PORTFOLIO PAGE--------- */
+
+.portfolio {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
+/*======== Filter ======== */
+
+.filter-list {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 0;
+  margin-bottom: 72px;
+}
+
+.filter-item:not(:last-child) {
+  margin-right: 24px;
+}
+
+.filter-button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  display: block;
+
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border: none;
+  border-radius: 4px;
+
+  color: var(--primary-brand-color);
+  transition: color var(--transition), background-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+
+  color: #e7e9fc;
+  background-color: var(--pressed-state-color);
+}
+
+/*======== Filter ======== */
+
+/*========= Works list ======== */
+
+.works-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.works-list-item:not(:nth-child(3n)) {
+  margin-right: 24px;
+}
+
+.works-list-item:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 40px;
+}
+
+.item-link {
+  margin-bottom: 32px;
+}
+
+.item-img {
+  display: block;
+}
+
+.item-name {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.item-hover {
+  transition: box-shadow var(--transition);
+}
+
+.item-hover:hover,
+.item-hover:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.works-item-title {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  margin-top: 0;
+  margin-bottom: 8px;
+
+  color: #2e2f42;
+}
+
+.item-text {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+
+  margin-top: 0;
+  margin-bottom: 0;
+
+  color: #434455;
+}
+/* ------Overlay------------ */
+.overlay-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  overflow: auto;
+  transform: translate(0, 100%);
+  transition: transform 500ms linear;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+
+  color: var(--primary-bg-color);
+  background-color: var(--primary-brand-color);
+
+  padding-top: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
+  margin: 0;
+}
+
+.item-link:hover .overlay,
+.item-link:focus .overlay {
+  transform: translate(0, 0);
+}
+
+/* ------Overlay------------ */
+
+/*========= Works list ======== */
