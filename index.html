@@ -340,12 +340,26 @@
         </div>
     </footer>
     <!-------------- Modal window------------ -->
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidde" data-modal>
         <div class="modal">
             <button class="modal-close-button" type="button" data-modal-close><svg class="modal-close-icon" width="8"
                     height="8">
                     <use href="./images/sprite.svg#close-modal"></use>
                 </svg></button>
+            <p class="modal-title">Leave your contacts and we will call you back</p>
+            <form action="" class="modal-form">
+                <label class="modal-form-field"><span class="modal-field-desc">Name</span><input type="text" name="user_name"
+                        class="modal-form-input" required></label>
+                <label class="modal-form-field"><span class="modal-field-desc">Phone</span><input type="tel" name="user_phone"
+                        class="modal-form-input" required></label>
+                <label class="modal-form-field"><span class="modal-field-desc">Email</span><input type="email" name=""
+                        class="modal-form-input" required></label>
+                <label class="modal-form-field"><span class="modal-field-desc">Comment</span><textarea name="user_message" class="modal-form-message" placeholder="Text input"></textarea></label>
+                <input id="privacy-policy" type="checkbox" name="privacy_policy"  class="modal-form-check"><label for="privacy-policy"
+                    class="modal-form-check-desc">I accept the terms and conditions of the <a href="">Privacy
+                        Policy</a></label>
+                <button type="submit" class="modal-send-button">Send</button>
+            </form>
         </div>
     </div>
 
