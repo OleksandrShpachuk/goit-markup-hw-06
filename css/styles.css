@@ -537,6 +537,7 @@ body {
   margin-bottom: 0;
 }
 
+/* ----Social icons---- */
 .social-text {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -575,6 +576,71 @@ body {
   background-color: #31d0aa;
 }
 
+/* ------Subscribe form------- */
+
+.wrap3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.subscribe-form-wrap {
+  display: flex;
+  align-items: center;
+  width: 460px;
+}
+
+.subscribe-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+
+  letter-spacing: 0.02em;
+  color: #ffffff;
+
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.subscribe-form-input {
+  width: 264px;
+  height: 40px;
+  padding-left: 16px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  background-color: #2E2F42;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2.0;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+}
+
+
+.subscribe-button {
+  width: 165px;
+  height: 40px;
+  cursor: pointer;
+  margin-left: 24px;
+  padding: 0;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+
+  border: none;
+  background-color: var(--primary-brand-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+
+
+
 /*=========== Footer ============== */
 /* ======== Modal Window=========== */
 
@@ -602,7 +668,11 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   min-width: 408px;
-  min-height: 516px;
+  min-height: 584px;
+  padding-top: 72px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 24px;
 
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -642,12 +712,11 @@ body {
   fill: #ffffff;
 }
 
+/* -----Modal Form------ */
+
 .modal-title {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  padding-top: 72px;
-  
+  margin-top: 0;
+  margin-bottom: 16px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -656,6 +725,137 @@ body {
   letter-spacing: 0.02em;
   color: #2e2f42;
 }
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form-field {
+  margin-bottom: 8px;
+}
+
+.modal-field-desc {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  padding-left: 38px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+}
+
+.modal-form-input:focus {
+  outline: none;
+  border: 1px solid var(--primary-brand-color);
+  border-radius: 4px;
+}
+
+.modal-form-message {
+  width: 100%;
+  height: 120px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+}
+
+.modal-form-message:focus {
+  outline: none;
+  border: 1px solid var(--primary-brand-color);
+  border-radius: 4px;
+}
+
+.modal-form-check {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+}
+
+.modal-form-check-desc::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  padding-top: 2px;
+  margin-right: 8px;
+  cursor: pointer;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+}
+
+.modal-form-check:checked + .modal-form-check-desc::before {
+  background-color: var(--primary-brand-color);
+  background-image: url(../images/Checked-icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.modal-form-check:focus + .modal-form-check-desc::before {
+  border: 2px solid var(--pressed-state-color);
+  border-radius: 2px;
+}
+
+.modal-form-check-desc {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+
+.policy-link {
+  padding-left: 2px;
+  color: var(--primary-brand-color);
+}
+
+.modal-send-button {
+  display: block;
+  margin: auto;
+  width: 169px;
+  height: 56px;
+  cursor: pointer;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+
+  border: none;
+  background-color: var(--primary-brand-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.modal-send-button:focus,
+.modal-send-button:hover {
+  background: var(--pressed-state-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+/*----- Modal Form -----*/
+/* =======Modal Window======= */
 
 /* -------PORTFOLIO PAGE--------- */
 
