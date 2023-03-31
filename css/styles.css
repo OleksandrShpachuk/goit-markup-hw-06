@@ -583,10 +583,12 @@ body {
   flex-direction: column;
 }
 
-.subscribe-form-wrap {
+.subscribe-form {
   display: flex;
   align-items: center;
   width: 460px;
+  margin: 0;
+  padding: 0;
 }
 
 .subscribe-text {
@@ -605,41 +607,51 @@ body {
 .subscribe-form-input {
   width: 264px;
   height: 40px;
-  padding-left: 16px;
+  padding: 0 0 0 16px;
   border: 1px solid #ffffff;
   border-radius: 4px;
-  background-color: #2E2F42;
+  background-color: #2e2f42;
 
   font-weight: 400;
   font-size: 12px;
-  line-height: 2.0;
+  line-height: 2;
   letter-spacing: 0.04em;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
-
 .subscribe-button {
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 24px;
   width: 165px;
   height: 40px;
   cursor: pointer;
   margin-left: 24px;
-  padding: 0;
 
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  color: #FFFFFF;
+  color: #ffffff;
 
   border: none;
   background-color: var(--primary-brand-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  transition: background-color var(--transition);
 }
 
+.subscribe-icon {
+  margin-left: 16px;
 
+  fill: white;
+}
 
+.subscribe-button:hover,
+.subscribe-button:focus {
+  background-color: var(--pressed-state-color);
+}
 
 /*=========== Footer ============== */
 /* ======== Modal Window=========== */
@@ -751,12 +763,30 @@ body {
   padding-left: 38px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
+  transition: background-color var(--transition);
+}
+
+.modal-input-wraper {
+  display: block;
+  position: relative;
+}
+
+.modal-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translate(0, -50%);
+  transition: background-color var(--transition);
 }
 
 .modal-form-input:focus {
   outline: none;
   border: 1px solid var(--primary-brand-color);
   border-radius: 4px;
+}
+
+.modal-form-input:focus + .modal-input-icon {
+  fill: var(--primary-brand-color);
 }
 
 .modal-form-message {
@@ -768,6 +798,7 @@ body {
   padding-bottom: 8px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
+  transition: background-color var(--transition);
 
   font-weight: 400;
   font-size: 12px;
@@ -785,7 +816,6 @@ body {
   position: absolute;
   -webkit-appearance: none;
   -moz-appearance: none;
-
 }
 
 .modal-form-check-desc::before {
@@ -834,17 +864,18 @@ body {
   height: 56px;
   cursor: pointer;
 
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  color: #FFFFFF;
+  color: #ffffff;
 
   border: none;
   background-color: var(--primary-brand-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  transition: background-color var(--transition);
 }
 
 .modal-send-button:focus,
